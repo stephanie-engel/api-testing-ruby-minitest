@@ -26,8 +26,8 @@ class GoogleGeocodeApiTest < Minitest::Test
     # Additional URL query parameters
     @country_us = "components=country:US"
     @place_id_us = "place_id=ChIJCzYy5IS16lQRQrfeQ5K5Oxw"
-    @place_id_uk = "place_id=ChIJqZHHQhE7WgIReiWIMkOg-MQ"
     @country_uk = "components=country:UK"
+    @place_id_uk = "place_id=ChIJqZHHQhE7WgIReiWIMkOg-MQ"
   end
 
   def test_get_geocode_full_street_address
