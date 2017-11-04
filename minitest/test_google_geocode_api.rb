@@ -10,6 +10,17 @@ class GoogleGeocodeApiTest < Minitest::Test
 
   WebMock.allow_net_connect!
 
+  # The below tests check geocode and reverse geocode results
+  #
+  # Additionally, I created tests that will verify a specfic address is associated with the correct reverse geocode (and visa versa)
+  #
+  # Because the invalid responses that I would get from this API varied based on whether I exceeded the number of requests (or, possibly, if I had already submitted
+  # an erroneous request), I don't have specific tests to verify a 404 response.
+  #
+  # The last test in this suite (test_get_geocode_response_body_elements) verifies each element within the JSON response. I included this type of test, depending on if
+  # the business would find capturing that level of detail useful. Additionally, that type of request could be scaled to other test GET requests based on very specific
+  # parameters.
+
   def setup
     super
     @base_url = "https://maps.googleapis.com/maps/api/geocode/json"
