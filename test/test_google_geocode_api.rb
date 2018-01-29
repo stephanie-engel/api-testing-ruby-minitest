@@ -1,8 +1,7 @@
-require File.expand_path(File.dirname(__FILE__) + '/../test/test_helper')
-require File.expand_path(File.dirname(__FILE__) + '/../test/http_request')
+require File.expand_path(File.dirname(__FILE__) + '/../minitest/test_helper')
+require File.expand_path(File.dirname(__FILE__) + '/../minitest/http_request')
 
 require 'minitest/autorun'
-require 'test_helper'
 require 'json_expressions/minitest'
 
 class GoogleGeocodeApiTest < Minitest::Test
@@ -46,6 +45,7 @@ class GoogleGeocodeApiTest < Minitest::Test
     server_response = http_request(:get, valid_geocode_request)
 
     response_body = server_response.body
+    puts response_body
     formatted_address = JSON.parse(response_body)["results"][0]["formatted_address"]
     status = JSON.parse(response_body)["status"]
         assert_requested(:get, valid_geocode_request, times: 1)
@@ -58,6 +58,7 @@ class GoogleGeocodeApiTest < Minitest::Test
     server_response = http_request(:get, valid_geocode_request)
 
     response_body = server_response.body
+    puts response_body
     formatted_address = JSON.parse(response_body)["results"][0]["formatted_address"]
     status = JSON.parse(response_body)["status"]
     assert_requested(:get, valid_geocode_request, times: 1)
