@@ -1,4 +1,4 @@
-# ruby-testing
+# ruby-api-testing-minitest
 This repo includes a test suite for the Google Geocode API.
 
 Setups:
@@ -15,7 +15,7 @@ Setups:
 5. Once you have a local copy of the repo, you can run the test suite ```test_google_geocode_api.rb``` through your terminal.
  - Within your terminal, navigate to the specific directory that the test suite is located within. For example, on my machine, I used this command in my terminal: ```cd ~/RubymineProjects/google_geocode_api/minitest/```
 6. Lastly, run the test with the following command: ```ruby test_google_geocode_api.rb```
-7. If (hopefully) all the tests pass, you should see a result like this in your terminal: 
+7. When the tests pass, you should see a result like this in your terminal: 
 ```~/RubymineProjects/google_geocode_api/minitest [master] $ ruby test_google_geocode_api.rb
 Run options: --seed 44464
 
