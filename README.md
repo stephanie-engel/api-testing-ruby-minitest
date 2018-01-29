@@ -1,4 +1,4 @@
-# ruby-api-testing-minitest
+# api-testing-ruby-minitest
 This repo includes a test suite for the Google Geocode API.
 
 Setups:
